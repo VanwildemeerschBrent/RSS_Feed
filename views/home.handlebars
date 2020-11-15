@@ -1,29 +1,36 @@
 <div class="p-4 w-screen overflow-x-hidden">
-  {{#each articles}}
-    <p class="text-3xl font-semibold my-2">
-      {{this.title}}
-    </p>
-    <div class="flex flex-wrap">
-      {{#each this.items}}
-        <div
-          class="flex-initial m-2 hover:bg-green-500 hover:text-white cursor-pointer"
-        >
-          <div class="rounded overflow-hidden shadow-lg max-w-md">
-            {{#if this.enclosure}}
-              <img
-                class="max-w-md"
-                src="{{this.enclosure.url}}"
-                alt="Sunset in the mountains"
-              />
-            {{/if}}
-            <div class="px-6 py-4">
-              <div class="font-bold text-lg">
-                {{this.title}}
+  <div class="my-3">
+    {{#each articles}}
+      <div class="text-3xl font-semibold my-2">
+        <span class="p-1 bg-green-300">
+          {{this.title}}
+        </span>
+      </div>
+      <div class="flex flex-wrap">
+        {{#each this.items}}
+          <a
+            href="{{this.link}}"
+            target="_blank"
+            rel="noreferrer"
+            class="flex-initial m-2 hover:bg-green-500 hover:text-white cursor-pointer"
+          >
+            <div class="rounded overflow-hidden shadow-lg max-w-md">
+              {{#if this.enclosure}}
+                <img
+                  class="max-w-md"
+                  src="{{this.enclosure.url}}"
+                  alt="Sunset in the mountains"
+                />
+              {{/if}}
+              <div class="px-6 py-4">
+                <div class="font-bold text-lg">
+                  {{this.title}}
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  {{/each}}
+          </a>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
 </div>
