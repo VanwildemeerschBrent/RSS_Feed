@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "url": "https://sporza.be/nl.rss.xml"
+  },
+  {
+    "id": 1,
+    "url": "http://feeds.nieuwsblad.be/nieuws/snelnieuws"
+  },
+  {
+    "id": 2,
+    "url": "https://www.vrt.be/vrtnws/nl.rss.headlines.xml"
+  },
+  {
+    "id": 3,
+    "url": "https://www.wielerflits.nl/rss.php"
+  },
+  {
+    "id": 4,
+    "url": "https://www.voetbalzone.nl/rss/rss.xml"
+  }
+]
