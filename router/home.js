@@ -18,7 +18,9 @@ Router.get("/", (req, res) => {
   });
 
   Promise.all(feedURLS)
-    .then((response) => res.render("home", { pageTitle: "Welcome to your RSS Feed", articles: response }))
+    .then((response) => {
+      res.render("home", { pageTitle: "Welcome to your RSS Feed", articles: response });
+    })
     .catch((error) => res.status(400).json(error));
 });
 
