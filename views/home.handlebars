@@ -1,3 +1,20 @@
-   <h1>{{pageTitle}}</h1>
-   <pre>{{articles}}</pre>
-   
+<div class="p-4 w-screen">
+  {{#each articles}}
+    <p class="text-3xl font-semibold">
+      {{this.title}}
+    </p>
+    <div class="flex flex-wrap">
+      {{#each this.items}}
+        <div class="flex-initial hover:bg-green-500 cursor-pointer">
+          <div class="rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl">
+                {{this.title}}
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>
